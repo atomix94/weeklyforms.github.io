@@ -1,0 +1,329 @@
+$border: 1px transparent;
+$font:'Titillium Web', sans-serif;
+//mixins
+@mixin reset
+{
+    margin:0;
+    padding:0;
+    
+}
+
+@mixin form-look ($width,$height,$padding)
+{
+    display:flex;
+    flex-direction: column;
+    width:$width;
+    padding:$padding;
+ 
+    box-shadow: 0px 0px 0px 15px rgba(0,0,0,0.3);
+    height:$height;
+  
+   align-items:center;
+    background-color:rgb(244,244,244);
+}
+@mixin display ($display,$direction)
+{
+    display:$display;
+    flex-direction: $direction;
+
+}
+
+@mixin field-style
+{
+    padding:2% 2% 2% 30%;
+    border-radius:4px;
+    height:25px;
+    width:100%;
+    border:1px solid rgb(198,198,198);
+  margin-left:2%;
+    
+}
+
+@mixin button($width,$margin-left)
+{
+   
+  background: linear-gradient(to bottom, rgba(172,220,84,1) 0%, rgba(124,195,31,1) 100%);
+    width:$width;
+    height:50px;
+    border:none;
+    color:white;
+    font-size:1.5rem;
+    text-shadow: 0px 2px 2px rgba(150, 150, 150, 1);
+    padding:0;
+    border-radius:4px;
+    margin-left:$margin-left;
+    
+
+}
+
+@mixin big-wrapper
+{
+    
+    display:flex;
+    align-items:flex-start;
+    justify-content: space-around;
+    padding:2%;
+    margin: 0 5%;
+    
+}
+
+@mixin icon-image()
+{
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+body
+{
+    @include reset;
+    font-family: $font;
+    overflow-x: hidden;
+}
+
+
+
+.background
+{    display:flex;
+    background-image:url(bg.jpg);
+    background-position:right center;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:auto;
+    justify-content: space-around;
+  
+}
+
+
+.form-box
+{
+    
+    display:flex;
+    width:100%;
+    justify-content: center;
+    
+    
+    
+}
+.border
+{
+    width:30%;
+    height:60%;
+}
+
+.big-wrapper
+{
+    @include big-wrapper;
+    @include display(flex,column);
+}
+
+.left-form-wrapper
+{
+   @include form-look (
+       100%,100%,1%);
+    margin-bottom:40%;
+ }
+
+.left-form-wrapper:nth-child(2) > form
+{
+ @include display(flex,column);
+     width:100%;
+}
+.left-form-wrapper > form
+{
+    @include display(flex,column);
+    width:100%;
+  
+}
+//left form end
+
+
+.right-form-wrapper
+{
+    @include form-look(170%,70%,2%);
+    margin-bottom:40%;
+}
+.right-form-wrapper:nth-child(2)
+{
+    @include form-look(170%,70%,2%);
+    margin-bottom:40%;
+}
+
+
+
+.right-form-wrapper > form
+{    width:100%;
+}
+
+
+.right-form-wrapper > .input-wrapper
+{
+    width:100%;
+}
+
+.input-wrapper
+{
+    padding:2%;
+        @include display (flex,row);
+    position:relative;
+}
+
+.input-wrapper > input
+{
+   
+    @include field-style;
+   
+}
+
+//icons 
+.icon
+{
+     border-bottom: $border;
+    border-top:$border;
+    border-left:$border;
+    border-right:1px solid rgb(222,222,222);
+    width:18%;
+    left:8%;
+    top:54%;
+    position:absolute;
+    transform: translateY(-50%);
+    color:rgb(222,222,222);
+  margin-left:3%;
+    margin-top:1%;
+    
+    
+ 
+    
+}
+.icon-second-wrapper
+{   border-bottom: $border;
+    border-top:$border;
+    border-left:$border;
+    border-right:1px solid rgb(222,222,222);
+    width:18%;
+    left:8%;
+    top:54%;
+    position:absolute;
+    transform: translateY(-50%);
+    color:rgb(222,222,222);
+  margin-left:3%;
+    margin-top:1%;
+    
+}
+
+.location
+{
+    padding:2% 2% 2% 29%;
+    border-radius:4px;
+    height:36px;
+    width:100%;
+    border:1px solid rgb(198,198,198);
+  margin-left:2%;
+}
+
+//buttons
+.signup-button 
+{
+    @include button(94%,4%);
+}
+.send-email-button
+{
+    @include button(94%,4%);
+}
+
+.signin-button
+{
+     @include button(50%,4%);
+}
+
+.senddone-button
+{
+
+@include button (100%,0);
+    margin:3%;
+}
+
+.no-button
+{
+@include button (100%,0);
+    margin:3%;
+    background:red;
+   
+
+}
+
+//buttons ending
+label
+{
+    padding:0 0 2% 0;
+    margin-left:2%;
+}
+.label-button-wrapper
+{
+    @include display(flex,row);
+    width:100%;
+    
+}
+
+
+
+input[type="radio"] 
+{
+    display:none;
+}
+
+
+.radio-button {
+
+display:inline-block;
+    width:18px;
+    height:18px;
+    border:1px solid rgb(222,222,222);
+    border-radius:4px;
+    transform:translateY(20%);
+     margin-right:2px;
+    
+    
+
+}
+
+ .radio-button-check
+{    display:inline-block;
+    width:18px;
+    height:18px;
+    border:1px solid rgb(222,222,222);
+    border-radius:4px;
+    transform:translateY(20%);
+     margin-right:2px;
+    background-image:url('check.png');
+     background-repeat:no-repeat;
+     background-size:cover;
+     padding:2%;
+     box-sizing: border-box;
+}
+
+
+
+select
+{
+    @include field-style;
+    height:36px;
+     color:rgb(169,169,169);
+    
+   
+}
+
+textarea
+{    font-family:$font;
+     color:rgb(169,169,169);
+    width:92%;
+    margin-left:4%;
+    border:1px solid rgb(198,198,198);
+    height:200px;
+    padding:2%;
+    margin-top:3%;
+    margin-bottom:5%;
+}
+
+
