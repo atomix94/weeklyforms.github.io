@@ -61,9 +61,10 @@ $font:'Titillium Web', sans-serif;
     
     display:flex;
     align-items:flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
     padding:2%;
-    margin: 0 5%;
+    margin: 0 2%;
+    width:25vw;
     
 }
 
@@ -101,7 +102,12 @@ body
     
     display:flex;
     width:100%;
-    justify-content: center;
+   background-image:url(bg.jpg);
+    background-position:right center;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:auto;
+    justify-content: space-around;
     
     
     
@@ -121,14 +127,23 @@ body
 .left-form-wrapper
 {
    @include form-look (
+       100%,70%,1%);
+    margin-bottom:20%;
+ }
+
+.left-form-wrapper:nth-child(2)
+{    @include form-look (
        100%,100%,1%);
     margin-bottom:40%;
- }
+    
+}
 
 .left-form-wrapper:nth-child(2) > form
 {
  @include display(flex,column);
      width:100%;
+    height:100%;
+    
 }
 .left-form-wrapper > form
 {
@@ -141,19 +156,28 @@ body
 
 .right-form-wrapper
 {
-    @include form-look(170%,70%,2%);
+    @include form-look(30vw,70%,2%);
     margin-bottom:40%;
 }
 .right-form-wrapper:nth-child(2)
 {
-    @include form-look(170%,70%,2%);
+    @include form-look(30vw,70%,2%);
     margin-bottom:40%;
 }
-
-
+.right-form-wrapper:nth-child(3)
+{
+    height:50%;
+    
+}
+.right-form-wrapper
+{ @include form-look(29vw,70%,2%);
+    margin-bottom:40%;
+    
+}
 
 .right-form-wrapper > form
 {    width:100%;
+    height:100%;
 }
 
 
@@ -177,25 +201,49 @@ body
 }
 
 //icons 
+
+.left-form-wrapper .input-wrapper >
 .icon
+{
+    border-bottom: $border;
+    border-top:$border;
+    border-left:$border;
+    border-right:1px solid rgb(222,222,222);
+    width:20%;
+    left:4%;
+    height:calc(100% - 0.8rem);
+    position:absolute;
+    box-sizing: border-box;
+    color:rgb(222,222,222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.right-form-wrapper .input-wrapper > .icon
 {
      border-bottom: $border;
     border-top:$border;
     border-left:$border;
     border-right:1px solid rgb(222,222,222);
-    width:18%;
-    left:8%;
-    top:54%;
+    width:20%;
+    left:4%;
+    height:calc(100% - 1rem);
     position:absolute;
-    transform: translateY(-50%);
+    box-sizing: border-box;
     color:rgb(222,222,222);
-  margin-left:3%;
-    margin-top:1%;
-    
-    
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.icon-image
+{
+display:flex;
     
 }
+
 .icon-second-wrapper
 {   border-bottom: $border;
     border-top:$border;
@@ -226,10 +274,21 @@ body
 .signup-button 
 {
     @include button(94%,4%);
+    
 }
+
+.signup-button:nth-child(2)
+{
+    @include button(94%,4%);
+ 
+    
+    
+}
+
 .send-email-button
 {
     @include button(94%,4%);
+    
 }
 
 .signin-button
@@ -254,10 +313,26 @@ body
 }
 
 //buttons ending
-label
+label[for="test"]
 {
-    padding:0 0 2% 0;
-    margin-left:2%;
+    padding:0;
+    margin-left:0;
+ background-image:url(testicon.png);
+    background-repeat: no-repeat;
+    padding-left:20px;
+   
+}
+.input:checked + .label[for="test"]
+{
+    padding:0;
+    margin-left:0;
+   
+     
+    background-position:0 0.7vh;
+    padding-left:20px;
+      background-image:url(check.png);
+   background-repeat: no-repeat;
+    
 }
 .label-button-wrapper
 {
@@ -270,8 +345,12 @@ label
 
 input[type="radio"] 
 {
-    display:none;
+display:none;  
+        
+ 
 }
+
+
 
 
 .radio-button {
@@ -320,7 +399,7 @@ textarea
     width:92%;
     margin-left:4%;
     border:1px solid rgb(198,198,198);
-    height:200px;
+    height:20rem;
     padding:2%;
     margin-top:3%;
     margin-bottom:5%;
