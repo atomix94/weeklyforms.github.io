@@ -469,7 +469,6 @@ body {
 label[for="test"] {
   padding: 0;
   margin-left: 0;
-  background-image: url(testicon.png);
   background-repeat: no-repeat;
   padding-left: 20px; }
 
