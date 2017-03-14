@@ -63,62 +63,18 @@ $font:'Titillium Web', sans-serif;
     align-items:flex-start;
     justify-content: space-between;
     padding:2%;
-  
-    margin:0 2%;
+    margin: 0 2%;
     width:25vw;
-    max-height:150vh;
-   
     
 }
 
-@mixin big-wrapper-right
-{
-    display:flex;
-    align-items:flex-start;
-    justify-content: space-between;
-    padding:2%;
-  max-width:150vh;
-    margin:0 2%;
-    width:35vw;
-   
-    
-}
-
-@mixin icon-image
+@mixin icon-image()
 {
     
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-@mixin title
-{
-    @include display(flex,column);
-    height:auto;
-    color:white;
-     z-index:1000;
-    align-self: center;
-    margin:0;
-    margin-bottom:10%;
-    
-    
-    padding:0;
-     font-weight: 400;
-    font-size:2rem;
-    
-}
-
-.title
-{
-    @include title;
-}
-
-.title:nth-child(2)
-
-{    margin-bottom:20%;
-    @include title;
-    
-}
 
 body
 {
@@ -129,20 +85,29 @@ body
 
 
 
+.background
+{    display:flex;
+    background-image:url(bg.jpg);
+    background-position:right center;
+    background-repeat: no-repeat;
+    width:100vw;
+    height:auto;
+    justify-content: space-around;
+  
+}
 
 
 .form-box
 {
     
     display:flex;
-    width:100vw;
+    width:100%;
    background-image:url(bg.jpg);
     background-position:right center;
     background-repeat: no-repeat;
-  background-size:cover;
+    width:100vw;
     height:auto;
     justify-content: space-around;
-   
     
     
     
@@ -153,29 +118,23 @@ body
     height:60%;
 }
 
-.big-wrapper-left
+.big-wrapper
 {
     @include big-wrapper;
     @include display(flex,column);
 }
 
-.big-wrapper-right
-{@include big-wrapper-right;
-    @include display(flex,column);
-    
-}
-
 .left-form-wrapper
 {
    @include form-look (
-       25vw,50vh,1%);
-    margin-bottom:5%;
+       100%,70%,1%);
+    margin-bottom:20%;
  }
 
-.left-form-wrapper-bottom
+.left-form-wrapper:nth-child(2)
 {    @include form-look (
-       25vw,70vh,1%);
-    margin-bottom:20%;
+       100%,100%,1%);
+    margin-bottom:40%;
     
 }
 
@@ -190,34 +149,28 @@ body
 {
     @include display(flex,column);
     width:100%;
- 
   
 }
-
-.left-form-wrapper-bottom > form
-{
-    @include display(flex,column);
-    width:100%;
-    height:100%;
- 
-  
-}
-
 //left form end
 
 
+.right-form-wrapper
+{
+    @include form-look(30vw,70%,2%);
+    margin-bottom:40%;
+}
 .right-form-wrapper:nth-child(2)
 {
-    @include form-look(30vw,25vh,2%);
+    @include form-look(30vw,70%,2%);
     margin-bottom:40%;
 }
 .right-form-wrapper:nth-child(3)
 {
-    height:15vh;
+    height:50%;
     
 }
 .right-form-wrapper
-{ @include form-look(29vw,25vh,2%);
+{ @include form-look(29vw,70%,2%);
     margin-bottom:40%;
     
 }
@@ -267,25 +220,6 @@ body
     align-items: center;
     
 }
-.left-form-wrapper-bottom .input-wrapper >
-.icon
-{
-    border-bottom: $border;
-    border-top:$border;
-    border-left:$border;
-    border-right:1px solid rgb(222,222,222);
-    width:20%;
-    left:4%;
-    height:calc(100% - 0.8rem);
-    position:absolute;
-    box-sizing: border-box;
-    color:rgb(222,222,222);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
 .right-form-wrapper .input-wrapper > .icon
 {
      border-bottom: $border;
@@ -340,8 +274,16 @@ display:flex;
 .signup-button 
 {
     @include button(94%,4%);
+    
 }
 
+.signup-button:nth-child(2)
+{
+    @include button(94%,4%);
+ 
+    
+    
+}
 
 .send-email-button
 {
@@ -366,18 +308,10 @@ display:flex;
 @include button (100%,0);
     margin:3%;
     background:red;
-}
-.button-wrapper-left
-{    @include display(flex,column);
-margin-bottom:5%;
+   
+
 }
 
-.button-wrapper-right
-{
-    @include display(flex,row);
-margin-bottom:5%;
-    width:100%;
-}
 //buttons ending
 label[for="test"]
 {
@@ -404,8 +338,7 @@ label[for="test"]
 {
     @include display(flex,row);
     width:100%;
-    justify-content: flex-end;
-    margin-bottom:5%;
+    
 }
 
 
@@ -463,15 +396,13 @@ select
 textarea
 {    font-family:$font;
      color:rgb(169,169,169);
-    width:94%;
+    width:92%;
     margin-left:4%;
     border:1px solid rgb(198,198,198);
     height:20rem;
-  
+    padding:2%;
     margin-top:3%;
     margin-bottom:5%;
-    margin-right:3%;
-    box-sizing:border-box;
 }
 
 

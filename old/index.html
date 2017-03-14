@@ -25,14 +25,11 @@
 
 
 <div class="form-box">
-  
-   <div class="big-wrapper-left">
-  
+   
+   <div class="big-wrapper">
     <!-- register form -->
-    <h2 class=
-  "title">Register Form</h2>
-    <div class="left-form-wrapper">
     
+    <div class="left-form-wrapper">
     <!--form beginnig-->
      <form>
      <div class="input-wrapper">
@@ -89,7 +86,7 @@
              </div>
       
       
-          <span class="button-wrapper-left">
+          <span>
      <input type="radio" id="test">
 <label for="test">I have read and accept terms of service</label>
   
@@ -105,9 +102,8 @@
     <!--end of first box  -->
     
     <!-- messageform-->
-   <h2 class=
-  "title">Send Form</h2>
-    <div class="left-form-wrapper-bottom">
+    
+    <div class="left-form-wrapper">
         <form>
              <div class="input-wrapper">
         
@@ -134,17 +130,13 @@
         <textarea placeholder="Your message here">
            
        </textarea>
-       <span class="button-wrapper-left">
-          <label for="radio"> 
-          
+       <label for="radio"> 
+           <span></span>
      <input class="radio" type="radio" name="terms" value="terms">Send Copy to my email
         
         <button class="signup-button">Send Email</button>
-               </label>
-          </span>
-          
-          </div>
-         
+        </div>
+      
            
         </form>
     </div>
@@ -153,9 +145,7 @@
     <!-- short login box -->
     
     
-    <div class="big-wrapper-right">
-    <h2 class=
-  "title">Register Form</h2>
+    <div class="big-wrapper">
     <div class="right-form-wrapper">
      <form>
      <div class="input-wrapper">
@@ -178,25 +168,24 @@
         </div>
     <input  type="password" placeholder="Password">
          </div>
-        <span class="button-wrapper-right">
-        
+        <div class="label-button-wrapper">
+         
          <label for="radio"> 
-           
+           <span></span>
      <input class="radio" type="radio" name="terms" value="terms">Remember Me
 
      </label>  
     
         <button class="signin-button">Sign-In</button>
-            
-           </span>
+         
+           </div>
          </div>
          
     
         <!--end of short login box-->
         <!--send-done-box-->
         
-           <h2 class=
-  "title">Recover Form</h2>
+        
         <div class="right-form-wrapper">
      <form>
      <div class="input-wrapper">
@@ -218,7 +207,7 @@
         </div>
     <input  type="password" placeholder="Password">
          </div>
-        <span class="button-wrapper-right">
+        <div class="label-button-wrapper">
          
         
     
@@ -226,14 +215,11 @@
         <button class="senddone-button">Done</button>
          
          
-           </span>
+           </div>
          </div>
          <!--send done box end-->
          
          <!--subscribe form start-->
-         
-            <h2 class=
-  "title">Subscribe Form</h2>
          <div class="right-form-wrapper">
      <form>
      <div class="input-wrapper">
@@ -248,7 +234,7 @@
     <input type="text" placeholder="Your email">
          </div>
     
-        <span class="button-wrapper-right">
+        <div class="label-button-wrapper">
          
         
     
@@ -256,7 +242,7 @@
         <button class="no-button">No,thanks</button>
          
          
-           </span>
+           </div>
          </div>
          </div>
          
@@ -271,8 +257,6 @@
                 $(".radio-button-check").toggle;
                 $(".radio-button").hide;
             });
-       
-      
             
     </script>
    
