@@ -128,18 +128,44 @@ body
 }
 
 
+.logo
+{
+    
+    width:30%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
+.logo-bottom
+{
+    width:50%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+}
+.logo-wrapper
+{
+    display:flex;
+    justify-content:center;
+   
+     
+}
 
-
-
+.background
+{background-image:url(bg.jpg);
+    background-position:right center;
+    background-repeat: no-repeat;
+  background-size:cover;
+    
+}
 .form-box
 {
     
     display:flex;
     width:100vw;
-   background-image:url(bg.jpg);
-    background-position:right center;
-    background-repeat: no-repeat;
-  background-size:cover;
+   
     height:200vh;
     justify-content: space-around;
     overflow:hidden;
@@ -485,6 +511,16 @@ and (min-width: 360px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 3.0) {
   
+    .logo
+{
+    
+    width:90%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
     
     .big-wrapper-right
     {
@@ -498,7 +534,20 @@ and (-webkit-min-device-pixel-ratio: 3.0) {
 and (min-device-width : 375px) 
 and (max-device-width : 667px) 
 and (orientation : portrait) { 
-
+.logo
+{
+    
+    width:90%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
+  .logo-bottom
+    {
+        display:none;
+    }
 .form-box
     {
         display:block;
@@ -572,6 +621,21 @@ and (min-device-width : 375px)
 and (max-device-width : 667px) 
 and (orientation : landscape) { 
 
+    .logo-bottom
+    {
+        display:none;
+    }
+    .logo
+{
+    
+    width:70%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
+    
 .form-box
     {
        display:block;
@@ -637,7 +701,10 @@ and (orientation : landscape) {
 
 //ipad pro landscape
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
-    
+    .logo-bottom
+    {
+        display:none;
+    }
     .form-box
     {
         height:100%;
@@ -650,7 +717,21 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) { 
-
+.logo-bottom
+    {
+        display:none;
+    }
+    .logo
+{
+    
+    width:50%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
+    
 .form-box
     {
         
@@ -668,6 +749,21 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
 and (orientation : portrait) { 
 
+    .logo-bottom
+    {
+        display:none;
+    }
+    .logo
+{
+    
+    width:60%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
+    
 .form-box
     {
        display:block;
@@ -715,7 +811,25 @@ and (orientation : portrait) {
 }
 //galaxy s5 landscape
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-.big-wrapper-left
+.logo-bottom
+    {
+        display:none;
+    }
+    
+    .logo
+{
+    
+    width:80%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
+    
+    
+    
+    .big-wrapper-left
     {
 margin-left:6%;}
 
@@ -725,12 +839,29 @@ margin-left:6%;}
     margin-left:4.5%;
 }
 }
-
+//galaxy s5 portrait
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-.form-box
+.logo-bottom
+    {
+        display:none;
+    }
+    
+    .logo
+{
+    
+    width:90%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
+    
+    .form-box
     {
         display:block;
-        height:300vh;
+        height:350vh;
+        
     }
 .big-wrapper-left
     {
@@ -782,7 +913,10 @@ margin-left:6%;}
 }
 
 //iphone 6 plus landscape
-
+.logo-bottom
+    {
+        display:none;
+    }
 @media only screen 
     and (min-device-width : 414px) 
     and (max-device-width : 736px) 
@@ -790,7 +924,17 @@ margin-left:6%;}
     and (-webkit-min-device-pixel-ratio : 3) 
 { 
 
-
+.logo
+{
+    
+    width:70%;
+    height:auto;
+    padding:2%;
+    opacity:0.3;
+   
+    
+}
+    
 .form-box
     {
         display:block;

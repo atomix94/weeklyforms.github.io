@@ -51,16 +51,40 @@ body {
   font-family: "Titillium Web", sans-serif;
   overflow-x: hidden; }
 
+.logo {
+  width: 30%;
+  height: auto;
+  padding: 2%;
+  opacity: 0.3; }
+
+.logo-bottom {
+  width: 50%;
+  height: auto;
+  padding: 2%;
+  opacity: 0.3; }
+
+.logo-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.background {
+  background-image: url(bg.jpg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 .form-box {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  background-image: url(bg.jpg);
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 200vh;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
@@ -474,10 +498,25 @@ textarea {
   box-sizing: border-box; }
 
 @media only screen and (min-width: 360px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+  .logo {
+    width: 90%;
+    height: auto;
+    padding: 2%;
+    opacity: 0.3; }
+
   .big-wrapper-right {
     position: relative;
     top: 20%; } }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  .logo {
+    width: 90%;
+    height: auto;
+    padding: 2%;
+    opacity: 0.3; }
+
+  .logo-bottom {
+    display: none; }
+
   .form-box {
     display: block;
     height: auto; }
@@ -563,6 +602,15 @@ textarea {
     margin-left: auto;
     margin-right: auto; } }
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+  .logo-bottom {
+    display: none; }
+
+  .logo {
+    width: 70%;
+    height: auto;
+    padding: 2%;
+    opacity: 0.3; }
+
   .form-box {
     display: block;
     height: 620vh; }
@@ -633,9 +681,21 @@ textarea {
   .big-wrapper-right .right-form-wrapper:nth-child(3) {
     height: 50vh; } }
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .logo-bottom {
+    display: none; }
+
   .form-box {
     height: 100%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .logo-bottom {
+    display: none; }
+
+  .logo {
+    width: 50%;
+    height: auto;
+    padding: 2%;
+    opacity: 0.3; }
+
   .form-box {
     display: -webkit-box;
     display: -webkit-flex;
@@ -643,6 +703,15 @@ textarea {
     display: flex;
     height: auto; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .logo-bottom {
+    display: none; }
+
+  .logo {
+    width: 60%;
+    height: auto;
+    padding: 2%;
+    opacity: 0.3; }
+
   .form-box {
     display: block;
     height: auto; }
@@ -699,15 +768,33 @@ textarea {
     width: 100%;
     height: 18vh; } }
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  .logo-bottom {
+    display: none; }
+
+  .logo {
+    width: 80%;
+    height: auto;
+    padding: 2%;
+    opacity: 0.3; }
+
   .big-wrapper-left {
     margin-left: 6%; }
 
   .big-wrapper-right {
     margin-left: 4.5%; } }
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  .logo-bottom {
+    display: none; }
+
+  .logo {
+    width: 90%;
+    height: auto;
+    padding: 2%;
+    opacity: 0.3; }
+
   .form-box {
     display: block;
-    height: 300vh; }
+    height: 350vh; }
 
   .big-wrapper-left {
     width: 100%;
@@ -741,7 +828,16 @@ textarea {
   .big-wrapper-right .right-form-wrapper {
     width: 90%;
     margin-left: 7%; } }
+.logo-bottom {
+  display: none; }
+
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 3) {
+  .logo {
+    width: 70%;
+    height: auto;
+    padding: 2%;
+    opacity: 0.3; }
+
   .form-box {
     display: block;
     height: 700vh; }
