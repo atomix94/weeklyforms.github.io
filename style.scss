@@ -1030,10 +1030,37 @@ margin-left:6%;}
 }
 
 
-//desire media query
+//desire media query portrait
 
 
-@media only screen and (min-width:720px) and (min-height:1280px){
+@media only screen and (max-width:720px) and (min-height:1280px) and (orientation:portrait){
+    
+    .logo
+    {
+        width:60%;
+    }
+    
+    .form-box
+    {
+        display:block;
+    }
+    
+    .big-wrapper-left
+    {
+        width:60vw;
+    }
+    
+    .big-wrapper-right
+    {
+        width:60vw;
+        margin:0px auto;
+    }
+}
+
+//desire media query portrait
+
+
+@media only screen and (min-width:720px) and (max-height:1280px) and (orientation:landscape){
     
     .logo
     {
