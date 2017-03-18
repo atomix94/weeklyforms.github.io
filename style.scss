@@ -154,7 +154,7 @@ body
 }
 
 .background
-{background-image:url(bg.jpg);
+{background-image:url("img/bg.jpg");
     background-position:right center;
     background-repeat: no-repeat;
   background-size:cover;
@@ -427,7 +427,7 @@ label[for="test"]
      
     background-position:0 0.7vh;
     padding-left:20px;
-      background-image:url(check.png);
+      background-image:url(img/check.png);
    background-repeat: no-repeat;
     
 }
@@ -473,7 +473,7 @@ display:inline-block;
     border-radius:4px;
     transform:translateY(20%);
      margin-right:2px;
-    background-image:url('check.png');
+    background-image:url('img/check.png');
      background-repeat:no-repeat;
      background-size:cover;
      padding:2%;
@@ -505,6 +505,39 @@ textarea
     box-sizing:border-box;
 }
 
+/*
+@media only screen and (max-width:940px)
+{    .logo
+    {
+        width:50%;
+        
+    }
+    .form-box
+    {
+        display:block;
+        height:320vh;
+       & > .big-wrapper-left
+        {
+            width:70vw;
+            height:120vh;
+        }
+           
+        & > .big-wrapper-right
+            {    width:70vw;
+            height:120vh;
+         
+            margin-left:auto;
+            margin-right:auto;
+            
+            & >.right-form-wrapper
+            {
+                height:27vh;
+            }
+        }
+    
+    }
+}
+*/
 //nexus 5x portrait
 @media only screen 
 and (min-width: 360px)
@@ -525,7 +558,7 @@ and (-webkit-min-device-pixel-ratio: 3.0) {
     .big-wrapper-right
     {
         position:relative;
-        top:20%;
+        top:5%;
     }
 }
 
@@ -698,13 +731,17 @@ and (orientation : landscape) {
         height:50vh;
     }
 }
-
+//ipad pro portrait
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+    
+    .logo
+    {
+        width:40%;
+    }
+}
 //ipad pro landscape
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
-    .logo-bottom
-    {
-        display:none;
-    }
+   
     .form-box
     {
         height:100%;
@@ -717,10 +754,7 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) { 
-.logo-bottom
-    {
-        display:none;
-    }
+
     .logo
 {
     
@@ -776,6 +810,7 @@ and (orientation : portrait) {
         
         margin-left:auto;
         margin-right:auto;
+        margin-top:0;
     }
     
     .big-wrapper-right .right-form-wrapper
@@ -790,14 +825,14 @@ and (orientation : portrait) {
     .left-form-wrapper
 {
    @include form-look (
-     100%,23rem,1%);
+     100%,26rem,1%);
     margin-bottom:5%;
     
  }
 
 .left-form-wrapper-bottom
 {    @include form-look (
-       100%,35rem,1%);
+       100%,37rem,1%);
     margin-bottom:20%;
     
 }
@@ -866,48 +901,48 @@ margin-left:6%;}
 .big-wrapper-left
     {
         width:100%;
-        margin-left:6%;
+        margin-left:auto;
         margin-right:auto;
         box-sizing:border-box;
-        max-height: 150vh;
+        //max-height: 150vh;
+        
     }
 .left-form-wrapper
     {
         width:80%;
         box-sizing:border-box;
-        margin-left:7%;
-        margin-right:auto;
+
     }
     
     .left-form-wrapper-bottom
     {    width:80%;
         box-sizing:border-box;
         height:85vh;
-        margin-left:7%;
+        
         
         
     }
     
     .big-wrapper-right
     {
-        position:relative;
-        top:8%;
+        
+      
         width:90%;
+        margin:0px auto;
        
     }
     
     .big-wrapper-right .right-form-wrapper:nth-child(2)
     {
         width:90%;
-        margin-left:7%;
-        margin-right:auto;
+       
         
     }
     
     .big-wrapper-right .right-form-wrapper
     {
         width:90%;
-        margin-left:7%;
+        
         
     }
 }
@@ -994,6 +1029,33 @@ margin-left:6%;}
     }
 }
 
+
+//desire media query
+
+
+@media only screen and (min-width:720px) and (min-height:1280px){
+    
+    .logo
+    {
+        width:60%;
+    }
+    
+    .form-box
+    {
+        display:block;
+    }
+    
+    .big-wrapper-left
+    {
+        width:60vw;
+    }
+    
+    .big-wrapper-right
+    {
+        width:60vw;
+        margin:0px auto;
+    }
+}
 //nexus 5x portrait
 @media only screen 
 and (min-width: 360px)
@@ -1003,7 +1065,6 @@ and (-webkit-min-device-pixel-ratio: 3.0) {
     
     .big-wrapper-right
     {
-        position:relative;
-        top:20%;
+        
     }
 }
