@@ -67,7 +67,7 @@ $font:'Titillium Web', sans-serif;
     margin-right:auto;
     flex-direction: column;
     width:40vw;
- max-height:150vh;
+
    
     
 }
@@ -76,8 +76,8 @@ $font:'Titillium Web', sans-serif;
 {
    display:block;
     padding:2%;
-  max-height:200vh;
-    margin:0 2%;
+ 
+    margin:5% auto;
     width:50vw;
    
     
@@ -97,8 +97,8 @@ $font:'Titillium Web', sans-serif;
     color:white;
      z-index:1000;
     align-self: center;
-    margin:0;
-    margin-bottom:5%;
+    margin:0 0 5% 0;
+   
     text-align:center;
     
     
@@ -131,7 +131,7 @@ body
 .logo
 {
     
-    width:30%;
+    min-width:25%;
     height:auto;
     padding:2%;
     opacity:0.3;
@@ -154,19 +154,19 @@ body
 }
 
 .background
-{background-image:url("img/bg.jpg");
+{background-image:url("/img/bg.jpg");
     background-position:right center;
     background-repeat: no-repeat;
   background-size:cover;
     
 }
 .form-box
-{
+{ 
     
     display:flex;
     width:100vw;
    
-    height:200vh;
+    
     justify-content: space-around;
     overflow:hidden;
    flex-wrap:wrap;
@@ -236,7 +236,7 @@ body
 
 .big-wrapper-right .right-form-wrapper:nth-child(2)
 {
-    @include form-look(27rem,25vh,2%);
+    @include form-look(27rem,auto,2%);
     margin-bottom:5%;
 }
 .big-wrapper-right .right-form-wrapper:nth-child(3)
@@ -246,7 +246,7 @@ body
     
 }
 .big-wrapper-right .right-form-wrapper
-{ @include form-look(27rem,25vh,2%);
+{ @include form-look(27rem,auto,2%);
     margin-bottom:5%;
     margin-left:auto;
     margin-right:auto;
@@ -542,7 +542,18 @@ textarea
     
     }
 }
+
+
 */
+
+@media only screen and (max-width:1020px)
+{
+    .form-box
+    {
+        flex-direction: column;
+    }
+    
+}
 //nexus 5x portrait
 @media only screen 
 and (min-width: 360px)
@@ -560,11 +571,8 @@ and (-webkit-min-device-pixel-ratio: 3.0) {
     
 }
     
-    .big-wrapper-right
-    {
-        position:relative;
-        top:5%;
-    }
+   
+    
 }
 
 //iphone 6 portrait
@@ -686,10 +694,7 @@ and (orientation : landscape) {
       width:80vw;
         margin-left:auto;
         margin-right:auto;
-        
-        height:500%;
-        position:relative;
-        top:690px;
+     
     }
 
     .big-wrapper-left
@@ -736,23 +741,6 @@ and (orientation : landscape) {
         height:50vh;
     }
 }
-//ipad pro portrait
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
-    
-    .logo
-    {
-        width:40%;
-    }
-}
-//ipad pro landscape
-@media only screen and (min-device-width: 1366px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
-   
-    .form-box
-    {
-        height:100%;
-    }
-}
-
 
 //ipad landscape
 @media only screen 
@@ -763,7 +751,7 @@ and (orientation : landscape) {
     .logo
 {
     
-    width:50%;
+    width:40%;
     height:auto;
     padding:2%;
     opacity:0.3;
@@ -795,7 +783,7 @@ and (orientation : portrait) {
     .logo
 {
     
-    width:60%;
+    width:50%;
     height:auto;
     padding:2%;
     opacity:0.3;
@@ -830,14 +818,14 @@ and (orientation : portrait) {
     .left-form-wrapper
 {
    @include form-look (
-     100%,26rem,1%);
+     100%,auto,1%);
     margin-bottom:5%;
     
  }
 
 .left-form-wrapper-bottom
 {    @include form-look (
-       100%,37rem,1%);
+       100%,auto,1%);
     margin-bottom:20%;
     
 }
@@ -845,10 +833,30 @@ and (orientation : portrait) {
    .big-wrapper-right .right-form-wrapper:nth-child(2)
     {
         
+        
         width:100%;
-        height:18vh;
+       
     }
 }
+
+//ipad pro portrait
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+    
+    .logo
+    {
+        width:45%;
+    }
+}
+//ipad pro landscape
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+   
+    .form-box
+    {
+        height:100%;
+    }
+}
+
+
 //galaxy s5 landscape
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
 .logo-bottom
@@ -900,7 +908,7 @@ margin-left:6%;}
     .form-box
     {
         display:block;
-        height:350vh;
+       
         
     }
 .big-wrapper-left
@@ -978,7 +986,7 @@ margin-left:6%;}
 .form-box
     {
         display:block;
-        height:700vh;
+       height:auto;
     }
 
 
@@ -991,14 +999,13 @@ margin-left:6%;}
     
     .left-form-wrapper
     {
-        width:90vw;
-        height:120vh;
+       
         
 
     }
     
     .left-form-wrapper-bottom
-    {    width:90vw;
+    {    
         
         height:auto;
         
@@ -1038,11 +1045,11 @@ margin-left:6%;}
 //desire media query portrait
 
 
-@media only screen and (max-width:720px) and (max-height:1280px) and (orientation:portrait){
+@media only screen and (max-width:360px) and (max-height:570px) and (orientation:portrait){
     
     .logo
     {
-        width:60%;
+        width:90%;
     }
     
     .form-box
@@ -1052,13 +1059,36 @@ margin-left:6%;}
     
     .big-wrapper-left
     {
-        width:60vw;
+        width:80vw;
+        height:auto;
     }
     
     .big-wrapper-right
     {
-        width:60vw;
+        width:80vw;
         margin:0px auto;
+    }
+    
+    .left-form-wrapper
+    {
+        width:auto;
+    }
+
+
+.left-form-wrapper-bottom
+    {
+        width:auto;
+    } 
+
+    
+    .big-wrapper-right .right-form-wrapper:nth-child(2)
+    {
+        
+        width:auto;
+    }
+   .big-wrapper-right .right-form-wrapper
+    {
+        width:auto;
     }
 }
 
